@@ -77,9 +77,9 @@ LOCAL_SHARED_LIBRARIES := \
         
 
 LOCAL_MODULE:= libPythonCore
+LOCAL_MODULE_TAGS := optional
+
 include $(BUILD_SHARED_LIBRARY)
-
-
 
 ##########################################################################################################
 # libPythonModuleStruct
@@ -121,6 +121,8 @@ LOCAL_SHARED_LIBRARIES := \
        
 
 LOCAL_MODULE:= libPythonModuleStruct
+LOCAL_MODULE_TAGS := optional
+
 include $(BUILD_SHARED_LIBRARY)
 
 
@@ -147,6 +149,8 @@ LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
 
 LOCAL_MODULE:= libPythonModuleSocket
+LOCAL_MODULE_TAGS := optional
+
 include $(BUILD_SHARED_LIBRARY)
 
 ##########################################################################################################
@@ -172,6 +176,8 @@ LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
 
 LOCAL_MODULE:= libPythonModuleMath
+LOCAL_MODULE_TAGS := optional
+
 include $(BUILD_SHARED_LIBRARY)
 
 ##########################################################################################################
@@ -197,6 +203,8 @@ LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
 
 LOCAL_MODULE:= libPythonModuleSelect
+LOCAL_MODULE_TAGS := optional
+
 include $(BUILD_SHARED_LIBRARY)
 
 
@@ -223,6 +231,8 @@ LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
 
 LOCAL_MODULE:= libPythonModuleUnicodeData
+LOCAL_MODULE_TAGS := optional
+
 include $(BUILD_SHARED_LIBRARY)
 
 ##########################################################################################################
@@ -248,6 +258,8 @@ LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
 
 LOCAL_MODULE:= libPythonModulePosixSubProcess
+LOCAL_MODULE_TAGS := optional
+
 include $(BUILD_SHARED_LIBRARY)
 
 
@@ -285,4 +297,6 @@ LOCAL_SHARED_LIBRARIES := \
         libPythonCore
 
 LOCAL_MODULE:= python
+LOCAL_MODULE_TAGS := optional
+
 include $(BUILD_EXECUTABLE)
