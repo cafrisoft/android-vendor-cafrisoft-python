@@ -19,3 +19,9 @@ PRODUCT_PACKAGES += \
         libPythonModuleTED \
         libPythonModuleUnicodeData
 
+
+#pygamen module
+PRODUCT_PACKAGES += \
+    libPythonModulePyGameBase
+
+
