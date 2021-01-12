@@ -55,7 +55,7 @@ echo ""
 echo "------------------------------------------------------------------"
 echo "copy PyGame Module "
 echo "------------------------------------------------------------------"
-pygame_modules=("libPythonModulePyGameBase.so" "libPythonModulePyGameConstants.so")
+pygame_modules=("libPythonModulePyGameBase.so" "libPythonModulePyGameConstants.so" "libPythonModulePyGameRect.so" "libPythonModulePyGameRWObject.so" "libPythonModulePyGameSurflock.so" "libPythonModulePyGameColor.so" "libPythonModulePyGameBufferProxy.so" "libPythonModulePyGameMath.so" "libPythonModulePyGameDisplay.so" "libPythonModulePyGameDraw.so" "libPythonModulePyGameImage.so" "libPythonModulePyGameJoyStick.so" "libPythonModulePyGameKey.so" "libPythonModulePyGameMouse.so" "libPythonModulePyGameSurface.so" "libPythonModulePyGameEvent.so")     
 #pygame_modules_dstname=("_ted.so" "_struct.so" )
 echo "pygame_modules = ${pygame_modules[@]}"
 echo pygame_modules count : ${#pygame_modules[@]}
