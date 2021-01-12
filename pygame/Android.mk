@@ -475,3 +475,91 @@ LOCAL_MODULE_TAGS := optional
 include $(BUILD_SHARED_LIBRARY)
 
 
+##########################################################################################################
+# libPythonModulePyGameTime
+##########################################################################################################
+
+include $(CLEAR_VARS)
+
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+PYTHON_TOP := $(LOCAL_PATH)/../source
+
+LOCAL_SRC_FILES := src_c/time.c
+
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DPy_BUILD_CORE     
+LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
+LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
+
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal 
+LOCAL_C_INCLUDES += $(SDL_TOP)/include 
+
+#LOCAL_CFLAGS += -D__LP64__
+        
+LOCAL_SHARED_LIBRARIES := libPythonCore libSDL2
+
+LOCAL_MODULE:= libPythonModulePyGameTime
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+##########################################################################################################
+# libPythonModulePyGamePixelCopy
+##########################################################################################################
+
+include $(CLEAR_VARS)
+
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+PYTHON_TOP := $(LOCAL_PATH)/../source
+
+LOCAL_SRC_FILES := src_c/pixelcopy.c
+
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DPy_BUILD_CORE     
+LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
+LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
+
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal 
+LOCAL_C_INCLUDES += $(SDL_TOP)/include 
+
+#LOCAL_CFLAGS += -D__LP64__
+        
+LOCAL_SHARED_LIBRARIES := libPythonCore libSDL2
+
+LOCAL_MODULE:= libPythonModulePyGamePixelCopy
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+
+##########################################################################################################
+# libPythonModulePyGameTransform
+##########################################################################################################
+
+include $(CLEAR_VARS)
+
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+PYTHON_TOP := $(LOCAL_PATH)/../source
+
+LOCAL_SRC_FILES := src_c/transform.c  src_c/scale2x.c src_c/rotozoom.c
+
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DPy_BUILD_CORE     
+LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
+LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
+
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal 
+LOCAL_C_INCLUDES += $(SDL_TOP)/include 
+
+#LOCAL_CFLAGS += -D__LP64__
+        
+LOCAL_SHARED_LIBRARIES := libPythonCore libSDL2
+
+LOCAL_MODULE:= libPythonModulePyGameTransform
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
