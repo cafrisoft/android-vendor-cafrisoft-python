@@ -94,6 +94,26 @@ cmd="ln -s /system/lib64/libPythonModulePosixSubProcess.so $PYTHON_DST/lib/lib-d
 echo $cmd
 $cmd 
 
+#ln -s /system/lib64/libPythonModuleSha1.so /python/lib/lib-dynload/_sha1.so
+cmd="ln -s /system/lib64/libPythonModuleSha1.so $PYTHON_DST/lib/lib-dynload/_sha1.so"
+echo $cmd
+$cmd 
+
+#ln -s /system/lib64/libPythonModuleSha256.so /python/lib/lib-dynload/_sha256.so
+cmd="ln -s /system/lib64/libPythonModuleSha256.so $PYTHON_DST/lib/lib-dynload/_sha256.so"
+echo $cmd
+$cmd 
+
+#ln -s /system/lib64/libPythonModuleSha512.so /python/lib/lib-dynload/_sha512.so
+cmd="ln -s /system/lib64/libPythonModuleSha512.so $PYTHON_DST/lib/lib-dynload/_sha512.so"
+echo $cmd
+$cmd 
+
+#ln -s /system/lib64/libPythonModuleRandom.so /python/lib/lib-dynload/_random.so
+cmd="ln -s /system/lib64/libPythonModuleRandom.so $PYTHON_DST/lib/lib-dynload/_random.so"
+echo $cmd
+$cmd 
+
 
 #################################################################################################
 #

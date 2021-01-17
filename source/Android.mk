@@ -262,6 +262,112 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
+##########################################################################################################
+# Module Build "sha1module"  libPythonModuleSha1
+##########################################################################################################
+
+include $(CLEAR_VARS)
+
+PYTHON_TOP := $(LOCAL_PATH)
+
+LOCAL_SRC_FILES += Modules/sha1module.c
+
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DPy_BUILD_CORE     
+
+LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
+LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal  
+
+LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
+        libPythonCore 
+
+LOCAL_MODULE:= libPythonModuleSha1
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+
+##########################################################################################################
+# Module Build "sha256module"  libPythonModuleSha256
+##########################################################################################################
+
+include $(CLEAR_VARS)
+
+PYTHON_TOP := $(LOCAL_PATH)
+
+LOCAL_SRC_FILES += Modules/sha256module.c
+
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DPy_BUILD_CORE     
+
+LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
+LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal 
+
+LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
+        libPythonCore 
+
+LOCAL_MODULE:= libPythonModuleSha256
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+
+##########################################################################################################
+# Module Build "sha512module"  libPythonModuleSha512
+##########################################################################################################
+
+include $(CLEAR_VARS)
+
+PYTHON_TOP := $(LOCAL_PATH)
+
+LOCAL_SRC_FILES += Modules/sha512module.c
+
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DPy_BUILD_CORE     
+
+LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
+LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal  
+
+LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
+        libPythonCore 
+
+LOCAL_MODULE:= libPythonModuleSha512
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
+##########################################################################################################
+# Module Build "_randommodule.c"  libPythonModuleRandom
+##########################################################################################################
+
+include $(CLEAR_VARS)
+
+PYTHON_TOP := $(LOCAL_PATH)
+
+LOCAL_SRC_FILES += Modules/_randommodule.c
+
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DPy_BUILD_CORE     
+
+LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
+LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal  
+
+LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
+        libPythonCore 
+
+LOCAL_MODULE:= libPythonModuleRandom
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+
 
 ##########################################################################################################
 # App 

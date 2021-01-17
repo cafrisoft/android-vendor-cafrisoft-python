@@ -17,7 +17,8 @@ PRODUCT_PACKAGES += \
         libPythonModuleSocket \
         libPythonModuleStruct \
         libPythonModuleTED \
-        libPythonModuleUnicodeData
+        libPythonModuleUnicodeData \
+        libPythonModuleSha1  libPythonModuleSha256 libPythonModuleSha512 libPythonModuleRandom
 
 
 #pygamen module
