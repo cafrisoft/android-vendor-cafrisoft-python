@@ -6,7 +6,7 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/base.c
@@ -35,7 +35,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/constants.c
@@ -65,7 +65,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/rect.c
@@ -94,7 +94,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/rwobject.c
@@ -124,7 +124,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/surflock.c
@@ -153,7 +153,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/color.c
@@ -183,7 +183,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/bufferproxy.c
@@ -213,7 +213,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/math.c
@@ -242,7 +242,7 @@ include $(BUILD_SHARED_LIBRARY)
 ##########################################################################################################
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/display.c
@@ -270,7 +270,7 @@ include $(BUILD_SHARED_LIBRARY)
 ##########################################################################################################
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/draw.c
@@ -300,7 +300,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/image.c
@@ -330,7 +330,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/joystick.c
@@ -360,7 +360,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/key.c
@@ -390,7 +390,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/mouse.c
@@ -419,7 +419,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/surface.c \
@@ -451,7 +451,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/event.c
@@ -481,7 +481,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/time.c
@@ -510,7 +510,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/pixelcopy.c
@@ -540,7 +540,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/transform.c  src_c/scale2x.c src_c/rotozoom.c
@@ -570,7 +570,7 @@ include $(BUILD_SHARED_LIBRARY)
 
 include $(CLEAR_VARS)
 
-SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/SDL-2.0.15-14640
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
 PYTHON_TOP := $(LOCAL_PATH)/../source
 
 LOCAL_SRC_FILES := src_c/font.c
