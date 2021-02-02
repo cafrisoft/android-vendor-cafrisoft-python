@@ -3,6 +3,14 @@ PYTHON_DST="/python"
 PYTHON_SRC="/system/etc/python"
 
 #################################################################################################
+#  make root directory
+#  /python
+################################################################################################
+
+mkdir $PYTHON_DST 0777 system system   
+mount tmpfs tmpfs $PYTHON_DST mode=0777,uid=1000,gid=1000
+
+#################################################################################################
 #
 #  make directory structure for Python
 #  /python/bin

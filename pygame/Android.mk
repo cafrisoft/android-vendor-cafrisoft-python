@@ -583,10 +583,11 @@ LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overfl
 
 LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal 
 LOCAL_C_INCLUDES += $(SDL_TOP)/include 
+LOCAL_C_INCLUDES += $(SDL_TOP)/../sdl2_ttf
 
 #LOCAL_CFLAGS += -D__LP64__
         
-LOCAL_SHARED_LIBRARIES := libPythonCore libSDL2
+LOCAL_SHARED_LIBRARIES := libPythonCore libSDL2 libSDL2_ttf
 
 LOCAL_MODULE:= libPythonModulePyGameFont
 LOCAL_MODULE_TAGS := optional

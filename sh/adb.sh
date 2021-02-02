@@ -9,7 +9,7 @@ python_site_package_path=$python_package_path/"site-packages"
 python_module_path=$python_package_path"/lib-dynload"
 
 host_OUTT="out/target/product/odroidn2"
-#host_python_lib_path="vendor/samsung_slsi/exynos8895/anapass/test-system-app/Python/android-python-package/lib/python3.8"
+host_python_lib_path="vendor/cafrisoft/python/package/lib/python3.8"
 host_python_conf_path="vendor/cafrisoft/python/package/conf"
 
 echo "------------------------------------------------------------------"
@@ -84,10 +84,11 @@ echo "------------------------------------------------------------------"
 echo "copy *.sh"
 echo "------------------------------------------------------------------"
 
-#cmd="dos2unix $host_python_conf_path/config_python.sh"
-#echo $cmd
-#$cmd
-cmd="$adb $1 $2 push $host_python_conf_path/config_python.sh  /$python_conf_path"
+cmd="dos2unix $host_python_conf_path/config_python.sh"
+echo $cmd
+$cmd
+
+cmd="$adb $1 $2 push $host_python_conf_path/config_python.sh  /$python_conf_path/config_python.sh"
 echo $cmd
 $cmd
 
