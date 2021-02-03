@@ -921,10 +921,14 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
         }
 
 #if defined(__ANDROID__)
+        #ifdef ANDROID_CAFRISOFT_AOSP
+        flags |= PGS_FULLSCREEN;
+        #else
         if (!(flags & PGS_FULLSCREEN)){
             return RAISE(pgExc_SDLError,
                          "Flag FULLSCREEN required on Android");
         }
+        #endif
 #endif
 
         if (flags & PGS_FULLSCREEN) {

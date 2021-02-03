@@ -44,6 +44,9 @@ libPythonModulePyGameTime \
 libPythonModulePyGamePixelCopy \
 libPythonModulePyGameTransform \
 libPythonModulePyGameFont \
+libPythonModulePyGameMask \
+
+
 
 
 

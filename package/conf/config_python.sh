@@ -182,6 +182,10 @@ cmd="ln -s /system/lib64/libPythonModulePyGamePixelCopy.so $PYTHON_DST_PYGAME/pi
 echo $cmd
 $cmd 
 
+cmd="ln -s /system/lib64/libPythonModulePyGameFont.so $PYTHON_DST_PYGAME/font.so"
+echo $cmd
+$cmd 
+
 #################################################################################################
 #
 #   generate TED Command  on /python/bin/ 
