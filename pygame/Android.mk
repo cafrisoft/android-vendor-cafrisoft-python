@@ -614,3 +614,35 @@ LOCAL_MODULE_TAGS := optional
 
 include $(BUILD_SHARED_LIBRARY)
 
+
+##########################################################################################################
+# libPythonModulePyGameMask
+##########################################################################################################
+
+include $(CLEAR_VARS)
+
+SDL_TOP := $(TOP)/vendor/cafrisoft/sdl/source
+PYTHON_TOP := $(LOCAL_PATH)/../source
+
+LOCAL_SRC_FILES := src_c/mask.c src_c/bitmask.c
+
+LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
+LOCAL_CFLAGS += -DPy_BUILD_CORE     
+LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
+LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
+LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
+
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal 
+LOCAL_C_INCLUDES += $(SDL_TOP)/include 
+LOCAL_C_INCLUDES += $(SDL_TOP)/../sdl2_ttf
+
+#LOCAL_CFLAGS += -D__LP64__
+        
+LOCAL_SHARED_LIBRARIES := libPythonCore libSDL2 libSDL2_ttf
+
+LOCAL_MODULE:= libPythonModulePyGameMask
+LOCAL_MODULE_TAGS := optional
+
+include $(BUILD_SHARED_LIBRARY)
+

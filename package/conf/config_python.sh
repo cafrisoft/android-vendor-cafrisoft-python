@@ -166,7 +166,21 @@ cmd="ln -s /system/lib64/libPythonModulePyGameSurflock.so $PYTHON_DST_PYGAME/sur
 echo $cmd
 $cmd 
                
+cmd="ln -s /system/lib64/libPythonModulePyGameTime.so $PYTHON_DST_PYGAME/time.so"
+echo $cmd
+$cmd 
           
+cmd="ln -s /system/lib64/libPythonModulePyGameTransform.so $PYTHON_DST_PYGAME/transform.so"
+echo $cmd
+$cmd 
+
+cmd="ln -s /system/lib64/libPythonModulePyGameMask.so $PYTHON_DST_PYGAME/mask.so"
+echo $cmd
+$cmd 
+
+cmd="ln -s /system/lib64/libPythonModulePyGamePixelCopy.so $PYTHON_DST_PYGAME/pixelcopy.so"
+echo $cmd
+$cmd 
 
 #################################################################################################
 #
