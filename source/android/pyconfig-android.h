@@ -11,11 +11,11 @@
 //LOCAL_CFLAGS += -DVERSION = "3.8.2"
 //LOCAL_CFLAGS += -DVPATH = ""PythonVPath""
 
-#define PREFIX "/python"
+#define PREFIX "/data/python"
 #define EXEC_PREFIX PREFIX
 #define VERSION "3.8"
 #define VPATH ""
-#define PYTHONPATH "/python/lib/python3.8"
+#define PYTHONPATH "/data/python/lib/python3.8"
 #define SOABI ""
 
 #define ANAPASS_TESYSDATA_PYTHON_WPATH  L"/data/TESysData/python"

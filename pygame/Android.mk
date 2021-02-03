@@ -12,6 +12,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/base.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -41,6 +42,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/constants.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -71,6 +73,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/rect.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -100,6 +103,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/rwobject.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -130,6 +134,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/surflock.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -159,6 +164,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/color.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -189,6 +195,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/bufferproxy.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -219,6 +226,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/math.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -248,6 +256,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/display.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -276,6 +285,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/draw.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -306,6 +316,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/image.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -336,6 +347,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/joystick.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -366,6 +378,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/key.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -396,6 +409,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/mouse.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -427,6 +441,7 @@ LOCAL_SRC_FILES := src_c/surface.c \
    src_c/surface_fill.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -457,6 +472,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/event.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -487,6 +503,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/time.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -516,6 +533,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/pixelcopy.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -546,6 +564,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/transform.c  src_c/scale2x.c src_c/rotozoom.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -576,6 +595,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/font.c
 
 LOCAL_CFLAGS += -DANDROID
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers

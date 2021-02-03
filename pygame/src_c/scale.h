@@ -29,6 +29,7 @@
 #if !defined(SCALE_HEADER)
 #define SCALE_HEADER
 
+#ifndef ANDROID_CAFRISOFT_AOSP
 #if (defined(__GNUC__) && ((defined(__x86_64__) && !defined(_NO_MMX_FOR_X86_64)) || defined(__i386__))) || (defined(MS_WIN32) && !(defined(_M_X64) && defined(_NO_MMX_FOR_X86_64)))
 #define SCALE_MMX_SUPPORT
 
@@ -69,5 +70,6 @@ void filter_expand_X_SSE_gcc(Uint8 *srcpix, Uint8 *dstpix, int *xidx0, int *xmul
 #endif /* #if defined(_M_X64) */
 
 #endif /* #if (defined(__GNUC__) && .....) */
+#endif  //#ifndef ANDROID_CAFRISOFT_AOSP
 
 #endif /* #if !defined(SCALE_HEADER) */
