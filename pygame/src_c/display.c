@@ -19,6 +19,12 @@
   Pete Shinners
   pete@shinners.org
 */
+#ifdef ANDROID_CAFRISOFT_AOSP
+#define LOG_TAG "pygame_display"
+#include <cutils/log.h>
+
+#define CAFRI_ALOGD(fmt, ...)  ALOGD("[%s:%s %d] " fmt, __FILE__, __func__, __LINE__, ##__VA_ARGS__)
+#endif
 
 /*
  *  pygame display module
@@ -32,6 +38,7 @@
 #include "doc/display_doc.h"
 
 #include <SDL_syswm.h>
+
 
 static PyTypeObject pgVidInfo_Type;
 
@@ -828,6 +835,11 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
     scale_env = SDL_getenv("PYGAME_FORCE_SCALE");
     soft_env = SDL_getenv("PYGAME_SCALE_SOFTWARE");
 
+    CAFRI_ALOGD("win=0x%016LLX", win);
+    CAFRI_ALOGD("display_env=%s", display_env);
+    CAFRI_ALOGD("vsync_env=%s", vsync_env);
+    CAFRI_ALOGD("scale_env=%s", scale_env);
+    CAFRI_ALOGD("soft_env=%s", soft_env);
 
     /* TODO START: this block goes into a _get_display() functions. */
     if (win != NULL) {
@@ -846,6 +858,8 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
         SDL_GetGlobalMouseState(&mouse_position.x, &mouse_position.y);
         num_displays = SDL_GetNumVideoDisplays();
 
+        CAFRI_ALOGD("mouse_position=(%d, %d)  num_display=%d ", mouse_position.x, mouse_position.y, num_displays);
+        
         for (i = 0; i < num_displays; i++) {
             if (SDL_GetDisplayBounds(i, &display_bounds) == 0) {
                 if (SDL_PointInRect(&mouse_position, &display_bounds)) {

@@ -226,7 +226,7 @@ PYTHON_TOP := $(LOCAL_PATH)/../source
 LOCAL_SRC_FILES := src_c/math.c
 
 LOCAL_CFLAGS += -DANDROID
-LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP 
+LOCAL_CFLAGS += -DANDROID_CAFRISOFT_AOSP
 LOCAL_CFLAGS += -DPy_BUILD_CORE     
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
@@ -267,7 +267,7 @@ LOCAL_C_INCLUDES += $(SDL_TOP)/include
 
 #LOCAL_CFLAGS += -D__LP64__
         
-LOCAL_SHARED_LIBRARIES := libPythonCore libSDL2
+LOCAL_SHARED_LIBRARIES := liblog libPythonCore libSDL2
 
 LOCAL_MODULE:= libPythonModulePyGameDisplay
 LOCAL_MODULE_TAGS := optional
