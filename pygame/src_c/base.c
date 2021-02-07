@@ -260,6 +260,10 @@ pg_register_quit(PyObject *self, PyObject *value)
     Py_RETURN_NONE;
 }
 
+#ifdef ANDROID_CAFRISOFT_AOSP
+extern void Aosp_Init();
+#endif
+
 static PyObject *
 pg_init(PyObject *self, PyObject *args)
 {
@@ -267,6 +271,10 @@ pg_init(PyObject *self, PyObject *args)
     Py_ssize_t loop, num;
 
     int success = 0, fail = 0;
+
+#ifdef ANDROID_CAFRISOFT_AOSP
+    Aosp_Init();
+ #endif
 
     if (!pg_CheckSDLVersions()) {
         return NULL;

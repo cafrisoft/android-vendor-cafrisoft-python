@@ -862,10 +862,21 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
         
         for (i = 0; i < num_displays; i++) {
             if (SDL_GetDisplayBounds(i, &display_bounds) == 0) {
+
+                CAFRI_ALOGD("i=%d display_bounds=(%d %d %d %d)", i, display_bounds.x, display_bounds.y, display_bounds.w, display_bounds.h );
+
                 if (SDL_PointInRect(&mouse_position, &display_bounds)) {
+                    CAFRI_ALOGD("i=%d display_bounds=(%d %d %d %d)", i,
+                                display_bounds.x, display_bounds.y,
+                                display_bounds.w, display_bounds.h);
+                
                     display = i;
                     break;
                 }
+                CAFRI_ALOGD("i=%d display_bounds=(%d %d %d %d)", i,
+                            display_bounds.x, display_bounds.y,
+                            display_bounds.w, display_bounds.h);
+                
             }
         }
     }
@@ -883,14 +894,20 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
         }
     }
 
+    CAFRI_ALOGD("");
+
     if (w < 0 || h < 0)
         return RAISE(pgExc_SDLError, "Cannot set negative sized display mode");
+
+    CAFRI_ALOGD("");
 
     if (!SDL_WasInit(SDL_INIT_VIDEO)) {
         /*note SDL works special like this too*/
         if (!pg_init(NULL, NULL))
             return NULL;
     }
+
+    CAFRI_ALOGD("");
 
     if (!state->title) {
         state->title = malloc((strlen(DefaultTitle) + 1) * sizeof(char));
@@ -900,6 +917,8 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
         title = state->title;
     }
 
+    CAFRI_ALOGD("");
+
     state->using_gl = (flags & PGS_OPENGL) != 0;
     state->scaled_gl = state->using_gl && (flags & PGS_SCALED) != 0;
 
@@ -907,15 +926,21 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
     state->toggle_windowed_w = 0;
     state->toggle_windowed_h = 0;
 
+    CAFRI_ALOGD("");
+
     if (pg_texture) {
         SDL_DestroyTexture(pg_texture);
         pg_texture = NULL;
     }
 
+    CAFRI_ALOGD("");
+
     if (pg_renderer) {
         SDL_DestroyRenderer(pg_renderer);
         pg_renderer = NULL;
     }
+
+    CAFRI_ALOGD("");
 
     {
         Uint32 sdl_flags = 0;
@@ -937,6 +962,10 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
 #if defined(__ANDROID__)
         #ifdef ANDROID_CAFRISOFT_AOSP
         flags |= PGS_FULLSCREEN;
+        flags &= ~PGS_SCALED;
+
+        w = display_mode.w;
+        h = display_mode.h;
         #else
         if (!(flags & PGS_FULLSCREEN)){
             return RAISE(pgExc_SDLError,
@@ -944,6 +973,8 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
         }
         #endif
 #endif
+
+        CAFRI_ALOGD("flags=0x%08X w=%d h=%d ", flags, w, h);
 
         if (flags & PGS_FULLSCREEN) {
             if (flags & PGS_SCALED) {
@@ -965,6 +996,8 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
                              "Cannot set 0 sized SCALED display mode");
         }
 
+        CAFRI_ALOGD("");
+
         if (flags & PGS_OPENGL)
             sdl_flags |= SDL_WINDOW_OPENGL;
         if (flags & PGS_NOFRAME)
@@ -985,6 +1018,9 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
             else
                 SDL_GL_SetAttribute(SDL_GL_DOUBLEBUFFER, 0);
         }
+
+        CAFRI_ALOGD("");
+
 
 #pragma PG_WARN(Not setting bpp ?)
 #pragma PG_WARN(Add mode stuff.)
@@ -1034,10 +1070,15 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
                 }
             }
 
+            CAFRI_ALOGD("");
+
             w_1 = w * scale;
             h_1 = h * scale;
 
             if (!win) {
+
+                CAFRI_ALOGD("Try SDL_CreateWindow x=%d y=%d w_1=%d h_1=%d", x, y, w_1, h_1);
+
                 /*open window*/
                 win = SDL_CreateWindow(title, x, y, w_1, h_1, sdl_flags);
                 if (!win)
@@ -1045,6 +1086,8 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
                 init_flip = 1;
             }
             else {
+
+                CAFRI_ALOGD("");
                 /* change existing window.
                  this invalidates the display surface*/
                 SDL_SetWindowTitle(win, title);
@@ -1073,6 +1116,8 @@ pg_set_mode(PyObject *self, PyObject *arg, PyObject *kwds)
                 assert(surface);
             }
         }
+
+        CAFRI_ALOGD("");
 
         if (state->using_gl) {
             if (!state->gl_context) {
