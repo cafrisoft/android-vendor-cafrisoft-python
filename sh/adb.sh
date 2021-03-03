@@ -51,20 +51,6 @@ do
 done
 
 
-
-echo "------------------------------------------------------------------"
-echo "copy *.py"
-echo "------------------------------------------------------------------"
-cmd="$adb $1 $2 push $host_python_lib_path/ted.py  /$python_package_path"
-echo $cmd
-#$cmd
-
-cmd="$adb $1 $2 push $host_python_lib_path/site-packages/Anapass  /$python_package_path/site-packages"
-echo $cmd
-#$cmd
-
-echo ""
-
 echo "------------------------------------------------------------------"
 echo "copy *.sh"
 echo "------------------------------------------------------------------"

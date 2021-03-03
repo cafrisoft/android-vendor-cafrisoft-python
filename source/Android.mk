@@ -133,7 +133,6 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 PYTHON_TOP := $(LOCAL_PATH)
-TESYS_INC_TOP :=vendor/samsung_slsi/exynos8895/anapass/test-system-app
 
 LOCAL_SRC_FILES += Modules/socketmodule.c 
 
@@ -143,7 +142,7 @@ LOCAL_CFLAGS += -DPy_BUILD_CORE
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
 LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
-LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal   $(TESYS_INC_TOP)
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal 
 
 LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
@@ -160,7 +159,6 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 PYTHON_TOP := $(LOCAL_PATH)
-TESYS_INC_TOP :=vendor/samsung_slsi/exynos8895/anapass/test-system-app
 
 LOCAL_SRC_FILES += Modules/mathmodule.c 
 
@@ -170,7 +168,7 @@ LOCAL_CFLAGS += -DPy_BUILD_CORE
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
 LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
-LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal   $(TESYS_INC_TOP)
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal  
 
 LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
@@ -187,7 +185,6 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 PYTHON_TOP := $(LOCAL_PATH)
-TESYS_INC_TOP :=vendor/samsung_slsi/exynos8895/anapass/test-system-app
 
 LOCAL_SRC_FILES += Modules/selectmodule.c 
 
@@ -197,7 +194,7 @@ LOCAL_CFLAGS += -DPy_BUILD_CORE
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
 LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
-LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal   $(TESYS_INC_TOP)
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal  
 
 LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
@@ -215,7 +212,6 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 PYTHON_TOP := $(LOCAL_PATH)
-TESYS_INC_TOP :=vendor/samsung_slsi/exynos8895/anapass/test-system-app
 
 LOCAL_SRC_FILES += Modules/unicodedata.c
 
@@ -225,7 +221,7 @@ LOCAL_CFLAGS += -DPy_BUILD_CORE
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
 LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
-LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal   $(TESYS_INC_TOP)
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal  
 
 LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
@@ -242,7 +238,6 @@ include $(BUILD_SHARED_LIBRARY)
 include $(CLEAR_VARS)
 
 PYTHON_TOP := $(LOCAL_PATH)
-TESYS_INC_TOP :=vendor/samsung_slsi/exynos8895/anapass/test-system-app
 
 LOCAL_SRC_FILES += Modules/_posixsubprocess.c
 
@@ -252,7 +247,7 @@ LOCAL_CFLAGS += -DPy_BUILD_CORE
 LOCAL_CFLAGS += -Wno-error=date-time -Wno-error=int-conversion
 LOCAL_CFLAGS += -Wno-unused-parameter  -Wno-missing-field-initializers
 LOCAL_CFLAGS += -Wno-unused-function  -Wno-sign-compare  -Wno-shift-count-overflow   # 2020-12-26 newly add CFlag on Android9
-LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal   $(TESYS_INC_TOP)
+LOCAL_C_INCLUDES:= $(PYTHON_TOP)/android $(PYTHON_TOP)/Include $(PYTHON_TOP)/Include/internal  
 
 LOCAL_SHARED_LIBRARIES := libcutils libdl libgui liblog libui libutils  libz \
         libPythonCore 
